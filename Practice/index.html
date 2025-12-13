@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test</title>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <link rel="stylesheet" href="index.css">
+      <style>
+/*
+ ul{
+  gap: 10px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 30%;
+}
+
+ul li{
+    list-style: none;
+    border: 1px solid gray;   
+    width: 100px;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #007bff;
+    cursor: pointer;
+}
+#button-speed{
+  margin-top: 100px;
+  gap: 50px;
+}
+#cancel-speed, #ok-speed{
+  font-size: 50px;
+  background-color: #007bff;
+  color: #21201e;
+  border: 1px solid blue;
+  border-radius: 10px;
+  padding: 10px;
+}
+#ok-speed{
+  /* cursor: not-allowed;
+}
+
+#custom-input-card {
+  height: 200px;
+  width: 70%;
+  background-color: #007bff;
+  z-index: 1000;
+  display: none;
+  font-size: 50px;
+  position: absolute;
+}
+*/
+</style>
+</head>
+<body>
+  <div id="sleepPart">
+    <h2>Change Speed:</h2>
+    <div id="non-custom-part">
+      <ul id="list-speed">  </ul>
+    </div>
+    <div id="custom-input-card">
+         <span>Hour: </span>
+     <span>Minute: </span>
+     <span>Second: </span>
+     <br>
+      <span>
+        <input type="number" placeholder="Hour" id="hour-custom-sleep" min="0" max="23">
+        <input type="number" placeholder="Minute" id="minute-custom-sleep" min="0" max="60">
+        <input type="number" placeholder="Second" id="second-custom-sleep" min="0" max="60">
+      </span>
+    </div>
+    <div id="error"></div>
+    <div id="button-speed">
+      <button id="cancel-speed">Cancel</button>
+      <button id="ok-speed">Ok</button>
+    </div>
+    
+  </div>
+  
+  
+  <script>
+    // user can't click above given time.
+document.getElementById("hour-custom-sleep").addEventListener("input", (e) => {
+  if(e.target.value > 23) e.target.value = 23;
+  if(e.target.value < 0) e.target.value = 0;
+});
+
+document.getElementById("minute-custom-sleep").addEventListener("input", (e) => {
+  if(e.target.value > 59) e.target.value = 59;
+  if(e.target.value < 0) e.target.value = 0;
+});
+
+document.getElementById("second-custom-sleep").addEventListener("input", (e) => {
+  if(e.target.value > 59) e.target.value = 59;
+  if(e.target.value < 0) e.target.value = 0;
+});
+
+
+    let selectOkSpeed=document.getElementById("ok-speed")
+
+    let selectSleepPart=document.getElementById("sleepPart")
+    let selectUlHead=document.getElementById("list-speed")
+    let oneSpeed=document.createElement("li")
+    let selectError=document.getElementById("error")
+    oneSpeed.innerText="1.00";
+    oneSpeed.setAttribute("id", "60")
+    let fiveSpeed=document.createElement("li")
+    fiveSpeed.innerText="05: 00"
+    fiveSpeed.setAttribute("id", "300")
+    let tenSpeed=document.createElement("li")
+    tenSpeed.innerText="10: 00"
+    tenSpeed.id="600"
+    let thirtySpeed=document.createElement("li")
+    thirtySpeed.innerText="30: 00"
+    thirtySpeed.id="1800"
+    
+    let customSpeed=document.createElement("li")
+    customSpeed.innerText="Custom"
+    customSpeed.setAttribute("id", "custom-speed")
+    selectUlHead.append(oneSpeed, fiveSpeed, tenSpeed, thirtySpeed, customSpeed)
+    
+    let selectCustomCard=document.getElementById("custom-input-card")
+
+    let totalSecondFromInput=0;
+    
+    const isCorrectCustomSpeed=(h, m, s)=>{
+      let hour=parseInt(h)|| 0;
+      let minute=parseInt(m) || 0;
+      let  second=parseInt(s) || 0;
+          if(hour==0 && minute==0 && second==0){
+            selectError.innerText="Please enter a time."
+            selectError.style.display="block"
+            selectError.style.color="red";
+            return false;
+          }
+          
+          if(hour>23 || hour<0){
+              selectError.innerText="Please enter correct hour."
+              selectError.style.display="block"
+              selectError.style.color="red";
+              console.log("Please enter correct hour.");
+              return false;
+            }
+            else if( minute>60 || minute<0){
+              selectError.innerText="Please enter correct Minute."
+              selectError.style.display="block"
+              selectError.style.color="red";
+              return false;
+            }
+            else if(second>60 || second<0){
+            selectError.innerText="Please enter correct Second."
+            selectError.style.display="block"
+            selectError.style.color="red";
+            return false;
+          }
+          return true;
+        }
+        
+
+
+
+    const customSpeedFunction=()=>{
+    selectCustomCard.style.display="flow"
+    selectError.style.display = "none"; 
+
+    let selectHour=document.getElementById("hour-custom-sleep").value
+    let selectMinute=document.getElementById("minute-custom-sleep").value
+    let selectSecond=document.getElementById("second-custom-sleep").value
+    // let checkingCorrectSpeed=isCorrectCustomSpeed(selectHour, selectMinute, selectSecond);
+    // console.log(checkingCorrectSpeed);
+      if(isCorrectCustomSpeed(selectHour, selectMinute, selectSecond)==true){
+        let totalSecond = (parseInt(selectHour) || 0) * 3600 + 
+                  (parseInt(selectMinute) || 0) * 60 + 
+                  (parseInt(selectSecond) || 0);
+            return totalSecond;
+      }
+      else{
+        return false;
+      }
+    }
+
+    
+    const runTimeOutForThatSecond=(timeinSecond)=>{
+      setTimeout(() => {
+        // console.log("Stop this button.");
+        // now here we play pause the audio button.
+      }, timeinSecond*1000);
+    }
+
+
+
+    let selectThatId=0;
+    let isAnySleected=false, isFromManulaOrCustom=true;;
+    selectSleepPart.addEventListener("click", (e)=>{
+      if(e.target.tagName=="LI"){
+        let selectAllLi=document.querySelectorAll("li")
+        selectAllLi.forEach(f =>f.style.backgroundColor="")
+        selectCustomCard.style.display="none"
+        selectThatId=e.target.id
+        totalSecondFromInput=e.target.id;
+        isFromManulaOrCustom=true;
+        if(e.target.id=="custom-speed"){
+            selectCustomCard.style.display="block"; 
+        isFromManulaOrCustom=false;
+        }
+
+        e.target.style.backgroundColor="green"
+        isAnySleected=true;
+      }
+
+
+
+
+      if(e.target.id=="ok-speed"){
+        if(isFromManulaOrCustom==false){
+          totalSecondFromInput=customSpeedFunction()
+            if(totalSecondFromInput === false){  
+    return;
+  }
+        }
+        if(isAnySleected==false){
+          selectError.style.display="block"
+              selectError.innerText="Please select any of one";
+              selectError.style.color="red";
+              return;
+        }
+        selectError.style.display="none";
+        
+          runTimeOutForThatSecond(totalSecondFromInput);
+      }
+
+
+      if(e.target.id=="cancel-speed"){
+
+      }
+
+    })
+
+    
+  </script>
+</body>
+</html>
