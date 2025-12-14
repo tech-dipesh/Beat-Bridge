@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Speed</title>
+</head>
+<style>
+  input{
+    width: 50px;
+  }
+</style>
+<body>
+   <div id="custom-input-part">
+     <span>Hour: </span>
+     <span>Minute: </span>
+     <span>Second: </span>
+     <br>
+      <span>
+        <input type="number" placeholder="Hour" id="hour-custom-sleep" min="0">
+        <input type="number" placeholder="Minute" id="minute-custom-sleep">
+        <input type="number" placeholder="Second" id="second-custom-sleep">
+      </span>
+      <div id="error"></div>
+    </div>
+    <button id="custom-submit-button">Submit</button>
+    <script>
+
+      let selectError=document.getElementById("error")
+
+        const isCorrectCustomSpeed=(hour, minute, second)=>{
+          console.log("is correct speed is selceted.");
+          console.log(hour, minute, second);
+          if(hour==undefined && minute==undefined && second==undefined){
+            console.log(hour, minute, second);
+            selectError.innerText="Please enter a time."
+            selectError.style.display="contents"
+            selectError.style.color="red";
+            return false;
+          }
+          
+          if(hour>23 || hour<0){
+              selectError.innerText="Please enter correct hour."
+              selectError.style.display="contents"
+              selectError.style.color="red";
+              return false;
+            }
+            else if( minute>60 || minute<0){
+              selectError.innerText="Please enter correct Minute."
+              selectError.style.display="contents"
+              selectError.style.color="red";
+              return false;
+            }
+            else if(second>60 || second<0){
+            selectError.innerText="Please enter correct Second."
+            selectError.style.display="contents"
+            selectError.style.color="red";
+            return false;
+          }
+          return true;
+        }
+        let submitSleepTimer=document.getElementById("custom-submit-button")
+        
+        
+        
+        submitSleepTimer.addEventListener("click", (e)=>{
+          let selectHour=document.getElementById("hour-custom-sleep").value
+          let selectMinute=document.getElementById("minute-custom-sleep").value
+          let selectSecond=document.getElementById("second-custom-sleep").value
+
+         if(isCorrectCustomSpeed(selectHour, selectMinute, selectSecond)==true){
+          console.log("select hour is", selectHour);
+          let totalSecond=(selectHour*3600)+(selectMinute*60)+selectSecond;
+           console.log(totalSecond);
+
+           
+          let secondFromSetTimeout=0;
+           setTimeout(() => {
+              // secondFromSetTimeout+=1;
+              console.log("Total second is", totalSecond);
+           }, totalSecond*1000);
+         }
+        })
+    </script>
+</body>
+</html>

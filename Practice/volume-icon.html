@@ -1,0 +1,94 @@
+<!-- document.documentElement.requestFullscreen() -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <title>Full Screen Test</title>
+  <style>
+
+.slider {
+  --slider-width: 100%;
+  --slider-height: 50px;
+  --slider-bg: rgb(82, 82, 82);
+  --slider-border-radius: 9px;
+  --level-color: #fff;
+  --level-transition-duration: 0.1s;
+}
+
+.slider {
+  position: relative;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.slider .volume {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: var(--icon-margin);
+  color: var(--icon-color);
+  width: var(--icon-size);
+  height: auto;
+  position: absolute;
+  left: 0;
+  pointer-events: none;
+}
+
+.slider .level {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: var(--slider-width);
+  height: var(--slider-height);
+  background: var(--slider-bg);
+  overflow: hidden;
+  border-radius: var(--slider-border-radius);
+  -webkit-transition: height var(--level-transition-duration);
+  -o-transition: height var(--level-transition-duration);
+  transition: height var(--level-transition-duration);
+  cursor: inherit;
+  transform: rotate(270deg);
+}
+
+.slider .level::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 0;
+  height: 0;
+  -webkit-box-shadow: -200px 0 0 200px var(--level-color);
+  box-shadow: -200px 0 0 200px var(--level-color);
+}
+.slider .level::-moz-range-thumb {
+  width: 0;
+  height: 0;
+  border-radius: 0;
+  border: none;
+  box-shadow: -200px 0 0 200px var(--level-color);
+}
+
+
+  </style>
+
+</head>
+<body>
+  <!-- From Uiverse.io by seyed-mohsen-mousavi --> 
+<label class="slider">
+  <input type="range" class="level" />
+<i class="fa-solid fa-volume-high"></i>
+</label>
+<input type="number">
+
+  <script>
+  </script>
+</body>
+</html>
