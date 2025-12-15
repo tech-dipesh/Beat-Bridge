@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Player</title>
+
+</head>
+  <style>
+  </style>
+<body>
+  <header>
+    <ul>
+      <a href="index.html"><li>Homepage</li></a>
+      <a href="src/html/playlist.html"><li>Playlist</li></a>
+      <a id="search-header"><li>Search</li></a>
+    </ul>
+  </header>
+  
+  <div id="non-loading">
+    <div id="playlist">Playlist: <i class="fa-solid fa-bars" id="playlist-icon"></i>
+      <ul id="playlist-ul">
+      </ul>
+      
+    </div>
+    <div id="music-search">
+  <input type="text" placeholder="Search Music..." name="search" id="music-search-value">
+  <div id="search-result"></div>
+    </div>
+    
+  <div id="card">
+    <div id="titleDesc"></div>
+    <div id="divAudio">
+      <audio id="audiobtn"></audio> </div>
+      <!-- <div id="showtime"> -->
+        <div id="currenttime">0:0</div>
+        <div id="totaltime"></div>
+        <input type="range" id="videoProgress" value="0" min="0">
+        
+        
+        <div id="headTitle">
+          <span id="Title"></span>
+          <span id="Title"></span>
+          <span id="Title"></span>
+        </div>
+        
+        
+        <div id="icons">
+          <i class="fa-solid fa-heart" id="bookmark"></i>
+          <i class="fa-solid fa-backward" id="back-sec"></i>
+          <i class="fa-solid fa-backward-step" id="backward"></i>
+          <i class="fa-solid fa-play" id="play"></i>
+          <i class="fa-solid fa-forward-step" id="forward"></i>
+          <i class="fa-solid fa-forward" id="for-sec"></i>
+          <!-- <i class="fa-solid fa-rotate-left" id="loop" style="color: #ff8787></i> -->
+          <i class="fa-solid fa-rotate-left" id="loop"></i>
+          
+          
+          <!-- <input type="range" name="speed" id="speed" value="1" min="0.25" max="2.5"> -->
+        </div>
+        
+        <div id="volumediv">
+          <input type="range" min="1" id="volumerange" value="10" max="10">
+          <span id="volumevalue">100</span>
+          <i class="fa-solid fa-volume-xmark" id="mute"></i>
+        </div>
+     <div class="bottom-controls">
+  <button id="resetspeed">reset</button>
+  
+  <div class="slider-container">
+    <input type="range" name="speed" id="speed" value="4" min="1" max="12">
+    <div id="speedCurrent">1.00x</div>
+  </div>
+  
+  <button id="random">Random</button>
+
+  <script src="index.js" type="module"></script>
+</body>
+</html>
