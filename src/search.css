@@ -1,0 +1,49 @@
+#music-search {
+    position: absolute;
+    right: 5%;
+    top: 15%;
+    display: grid;
+    gap: 5px;
+}
+
+#music-search input{
+      background-color: #eee;
+    border: none;
+    padding: 1rem;
+    font-size: 1rem;
+    width: 13em;
+    border-radius: 1rem;
+    color: #0b78f2;
+    box-shadow: 0 0.4rem #dfd9d9;
+}
+
+
+#search-result {
+    position: relative;
+    display: grid;
+    font-size: 25px;
+    width: fit-content;
+    height: fit-content;
+}
+
+#search-result h4 {
+    display: grid;
+    padding: 5px;
+    cursor: pointer;
+    border: 1px solid #242323;
+}
+
+
+#search-result h4:hover{
+    color: #0b78f2;
+}
+
+
+
+.music-search input:focus {
+  outline-color: #0b78f2;
+}
+
+#search-header{
+    cursor: pointer;
+}
