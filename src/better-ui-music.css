@@ -1,0 +1,88 @@
+header{
+position: fixed; 
+  top: 0;        
+  left: 0;       
+  width: 100%;    
+  background-color: #f8f8f8;
+  box-shadow: 0 2px 5px #0000001a; 
+  z-index: 1000;  
+  margin-bottom: 20px;
+  height: 60px;
+}
+header ul{
+    display: flex;
+    gap: 20px;
+    font-size: 25px;
+    color: #007bff;
+    right: 5%;
+    position: absolute;
+}
+
+#non-playing{
+    margin-top: 5%;
+    
+}
+
+div#song-count {
+    font-size: 50px;
+    color: #007bff;
+        position: absolute; 
+    bottom: 40px;       
+    left: 50%;       
+    transform: translateX(-50%);
+
+     margin: 10px 0 0 0; 
+    display: flex;
+    white-space: nowrap;
+}
+
+a{
+    text-decoration: none;
+}
+#mute{
+    font-size: 25px;
+}
+
+
+      #speed {
+      width: 80%;
+      height: 15px;
+      margin: 10px auto;
+      /* display: block; */
+      background: #ffffff4d;
+      border-radius: 5px;
+      /* outline: none; */
+      cursor: pointer;
+      appearance: none;
+      /* position: relative; */
+    }
+    
+    #playPauseBtn, #volumeControl {
+      display: none;
+    }
+
+div#speedCurrent {
+    display: grid;
+    justify-content: center;
+  }
+li{
+    list-style-type: none;
+}
+
+  
+
+/* For making some basic responsive */
+@media (max-width: 768px) {
+    #card {
+        width: 90%;
+        height: 85%;
+    }
+    
+    #Title {
+        font-size: 1.5rem; 
+    }
+    
+    i {
+        font-size: 28px;
+    }
+}
