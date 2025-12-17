@@ -1,0 +1,217 @@
+:root {
+  --primary-color: #007bff;
+  --primary-dark: #0056b3;
+  --text-dark: #21201e;
+  --border-color: gray;
+  --white: #ffffff;
+  --spacing-small: 10px;
+  --spacing-medium: 20px;
+  --spacing-large: 50px;
+  --border-radius: 10px;
+}
+
+#sleepPart {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 9999;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
+}
+
+#sleep-container-page{
+  background-color: var(--white);
+  padding: var(--spacing-medium);
+  border-radius: var(--border-radius);
+  max-width: 600px;
+  width: 90%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+#sleepPart h2 {
+  text-align: center;
+  color: var(--text-dark);
+  margin-bottom: var(--spacing-medium);
+  font-size: 24px;
+}
+
+#list-speed {
+  gap: var(--spacing-small);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  list-style: none;
+  padding: 0;
+  margin: 0 auto var(--spacing-medium);
+}
+
+#list-speed li {
+  list-style: none;
+  border: 2px solid var(--border-color);
+  padding: var(--spacing-small);
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--primary-color);
+  cursor: pointer;
+  text-align: center;
+  border-radius: 5px;
+  background-color: var(--white);
+  transition: all 0.3s ease;
+}
+
+#list-speed li:hover {
+  background-color: #e7f3ff;
+  border-color: var(--primary-color);
+}
+
+#list-speed li[style*="background-color"] {
+  background-color: var(--primary-color) !important;
+  color: var(--white);
+  border-color: var(--primary-dark);
+}
+
+#button-speed {
+  margin-top: var(--spacing-large);
+  display: flex;
+  gap: var(--spacing-medium);
+  justify-content: center;
+  align-items: center;
+}
+
+#cancel-speed,
+#ok-speed {
+  font-size: 18px;
+  background-color: var(--primary-color);
+  color: var(--white);
+  border: 2px solid var(--primary-dark);
+  border-radius: var(--border-radius);
+  padding: 12px 24px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+#cancel-speed:hover,
+#ok-speed:hover {
+  background-color: var(--primary-dark);
+}
+
+#cancel-speed:active,
+#ok-speed:active {
+  background-color: #004085;
+}
+
+#custom-input-card {
+  background-color: #e7f3ff;
+  border: 2px solid var(--primary-color);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-medium);
+  margin: var(--spacing-medium) 0;
+  display: none;
+}
+
+#custom-input-card > span:first-of-type {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin-bottom: 15px;
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--text-dark);
+}
+
+#custom-input-card > span:last-of-type {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+#custom-input-card input[type="number"] {
+  width: 100px;
+  padding: 10px;
+  border: 2px solid var(--border-color);
+  border-radius: 5px;
+  font-size: 16px;
+  text-align: center;
+}
+
+#custom-input-card input[type="number"]:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+#error {
+  color: red;
+  font-size: 14px;
+  margin-top: var(--spacing-small);
+  text-align: center;
+  display: none;
+}
+
+@media (max-width: 768px) {
+  #sleepPart h2 {
+    font-size: 20px;
+  }
+
+  #list-speed {
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 8px;
+  }
+
+  #list-speed li {
+    font-size: 16px;
+    padding: 8px;
+  }
+
+  #button-speed {
+    gap: 15px;
+    margin-top: 30px;
+  }
+
+  #cancel-speed,
+  #ok-speed {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+
+  #custom-input-card > span:first-of-type {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+
+  #custom-input-card > span:last-of-type {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  #custom-input-card input[type="number"] {
+    width: 100%;
+    max-width: 250px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  #list-speed {
+    grid-template-columns: 1fr;
+    max-width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #button-speed {
+    flex-direction: column;
+    gap: var(--spacing-small);
+  }
+
+  #cancel-speed,
+  #ok-speed {
+    width: 100%;
+    max-width: 200px;
+  }
+}
