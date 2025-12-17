@@ -1,0 +1,56 @@
+ #playlist {
+        margin: 10% 0 0 5%;
+        font-size: 25px;
+        background-color: #588ddd;
+        /* width: 50%; */
+        width: 150px;
+        white-space: nowrap;
+        border-radius: 10px;
+        padding: 5px;
+        position: relative;
+        z-index: 1; 
+      }
+      
+      .fa-bars{
+        cursor: pointer;
+      }
+      #playlist-ul{
+        white-space: nowrap;
+        margin: 20px;  
+        font-family: 'Segoe UI', Tahoma, Verdana, sans-serif; 
+      }
+      #playlist-li{
+        font-size: 20px;
+        list-style-type: none;
+        background-color: #1176e9;
+        color: white;
+        margin: 10px 0;      
+        padding: 5px;   
+        width: fit-content;
+        border-radius: 8px;   
+        box-shadow: 0 4px 8px #0000001a; 
+        cursor: pointer;     
+        transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; 
+        list-style-type: none;
+      }
+
+#playlist-li:hover {
+  background-color: #0d5cb9; 
+  transform: translateY(-2px); 
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.fa-hourglass {
+    font-size: 15px;
+    left: 4%;
+    position: relative;
+    background-color: darkblue;
+    /* border: none; */
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.fa-hourglass::before{
+  margin: 1px;
+}
