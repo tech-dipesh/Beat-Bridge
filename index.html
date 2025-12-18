@@ -4,7 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Music Player</title>
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="./src/playlist.css">
+  <link rel="stylesheet" href="src/loading.css">
+  <link rel="stylesheet" href="src/better-ui-music.css">
+  <link rel="stylesheet" href="src/shortcut.css">
+  <link rel="stylesheet" href="src/search.css">
+  <link rel="stylesheet" href="src/lower-buttons.css">
+  <link rel="stylesheet" href="src/sleep.css">
 </head>
   <style>
   </style>
@@ -73,7 +81,68 @@
   </div>
   
   <button id="random">Random</button>
+  
+  <button id="sleep"><i class="fa-solid fa-stopwatch"></i></button>
+    <div id="sleepPart">
+      <div id="#sleepPart">
 
+        <h2>Change Speed:</h2>
+        <div id="non-custom-part">
+          <ul id="list-speed">  </ul>
+        </div>
+        <div id="custom-input-card">
+          <span>Hour: </span>
+          <span>Minute: </span>
+          <span>Second: </span>
+          <br>
+          <span>
+            <input type="number" placeholder="Hour" id="hour-custom-sleep" min="0" max="23">
+            <input type="number" placeholder="Minute" id="minute-custom-sleep" min="0" max="60">
+            <input type="number" placeholder="Second" id="second-custom-sleep" min="0" max="60">
+          </span>
+        </div>
+        <div id="error"></div>
+        <div id="button-speed">
+          <button id="cancel-speed">Cancel</button>
+          <button id="ok-speed">Ok</button>
+        </div>
+      </div>
+    
+  </div>
+
+</div>
+</div>
+
+<div id="song-count"></div>
+  <div id="h-load">
+    <div id="Loading"></div>
+  </div>
+
+  <footer id="keyword-shorcut-message">Please click Control+? to show all avaible keyword shortuct.</footer>
+
+  </div>
+    <div id="head-keyword">
+    <div id="keyword-shorcut">
+      <div id="left">
+        <p id="forward-button">Go Forward 10 Sec: L</p>
+        <div id="backward-button">Go backward 10 Sec: J</div>
+        <div id="play-button">Play Pause: SpaceBar/K</div>
+        <div id="mute-button">Mute Video: m</div>
+        <div id="searchbar-button">Jump to Searchbar: /</div>
+        <div id="arrow-left">Previous 5 Sec: arrow+left</div>
+        <div id="arrow-right">Next 5 Sec: arrow+right</div>
+      </div>
+      <i class="fa-solid fa-xmark" id="keyword-cut-button"></i>
+      <div id="right">
+        <div id="increase-speed">Increase Speed 5%: Control+.</div>
+        <div id="decrease-speed">Decrease Speed 5%: Control+,</div>
+        <div id="increase-volume">Increase Volume 5%: Up Arrow</div>
+        <div id="decrease-volume">Decrease volume 5%: Down Arrow</div>
+        <div id="next-button">Go to next Video: Shift+N</div>
+        <div id="previous-button">Go to Previous Video: Shift+p</div>
+        <div id="question-button">Select Control+? to Go Back</div>
+      </div>
+  </div>
   <script src="index.js" type="module"></script>
 </body>
 </html>
