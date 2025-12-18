@@ -1,4 +1,4 @@
-import  movieList  from "../src/music-list.js";
+import  movieList  from "../src/list/music-list.js";
 // import {searchHeadTop} from "../src/search.js"
 let selecttable=document.getElementById("table-table")
 movieList.forEach(e => {
