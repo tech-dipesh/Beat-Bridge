@@ -1,16 +1,16 @@
 
-When we want a any space not to go on next line:
+- When we want a any space not to go on next line:
   white-space: nowrap;
 
 
 
-Playlist start: 12/05
+#  Playlist start: 12/05
 
 
 
 
 
-Can use this 2 primary color in coming days i like this: #bfbfbf, #b2beb5
+- Can use this 2 primary color in coming days i like this: #bfbfbf, #b2beb5
 
 
 
@@ -26,17 +26,17 @@ during a module import export if there's the only single export don't need to im
 
 
 
-In JavaScript, document.documentElement is a fundamental property that refers to the root element of an HTML document. This property provides a way to access and manipulate the entire HTML document structure. 
+# In JavaScript, document.documentElement is a fundamental property that refers to the root element of an HTML document. This property provides a way to access and manipulate the entire HTML document structure. 
 
 
 
 
 
-#for accessign a url of the page we can use: document.documentURI;
+#- for accesing a url of the page we can use: document.documentURI;
 
 
 
-Temporal Dead Zone (TDZ): Variables declared with let and const exist in a TDZ from the beginning of their scope until their declaration is processed. Any attempt to access them during this period results in a ReferenceError.
+- Temporal Dead Zone (TDZ): Variables declared with let and const exist in a TDZ from the beginning of their scope until their declaration is processed. Any attempt to access them during this period results in a ReferenceError.
 
 
 # in given string the st.replaceAll(" ", ""), will remove all the space from the given string.
