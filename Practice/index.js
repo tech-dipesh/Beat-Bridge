@@ -1,3 +1,4 @@
+console.log("js reload");
 import movieList from "../src/music-list.js";
  let movieName = [
       {name: "A Mai Re new Kuma Sagar", file: "Practice/music-1.mp3"},

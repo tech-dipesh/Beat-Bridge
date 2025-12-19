@@ -1,4 +1,6 @@
 // For making a title infinite:
+
+console.log("printed");
 import movieList from "./src/list/music-list.js";
 import {playListExport} from "./src/playlist-index.js"
 import LoadingStates from "./src/loading.js";
@@ -36,6 +38,7 @@ playListExport()
 SleepFunctionality()
 exportBookMarkFeature();
 speedAndVolume()
+keyWordShortcut()
 // For head title.
 let headTitle=document.getElementById("headTitle")
 let playPause=document.getElementById('play');
