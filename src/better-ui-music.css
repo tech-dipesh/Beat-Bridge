@@ -72,10 +72,13 @@ li{
   
 
 /* For making some basic responsive */
-@media (max-width: 768px) {
+@media (max-width: 1080px) {
+    *{
+        font-size: 25px;
+    }
     #card {
         width: 90%;
-        height: 85%;
+        height: 50%;
     }
     
     #Title {

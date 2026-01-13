@@ -6,7 +6,7 @@ import SleepFunctionality from "./src/sleep.js"
 import exportBookMarkFeature from "./src/bookmark.js"
 import speedAndVolume from "./src/volume-speed.js";
 import movieList from "./src/list/music-list.js";
-let index=  localStorage.getItem("index")?? 0
+let index=  localStorage.getItem("index")?? 0;
 
 let audiobtn=document.getElementById("audiobtn");
 
@@ -104,6 +104,7 @@ document.addEventListener("DOMContentLoaded", (e)=>{
 
   // audiobtn.setAttribute("src", movieList[index].title);
   index=index?? 0
+  console.log('file is', movieList[index].file);
   audiobtn.src=movieList[index].file;
   title.forEach(element => element.innerText=`${movieList[index].title}`)
   document.title=`Music: ${movieList[index].title}`
