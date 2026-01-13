@@ -37,8 +37,6 @@
   //     { name: "Kholai Khola By Neetesh Jung Kunwar", file: "Practice/music-1.mp3" },
   //   ]
 
-import { title } from "../../..";
-
   // export default movieList;
 
   let movieList = [
@@ -46,14 +44,14 @@ import { title } from "../../..";
       id: 1,
       title: "Amm Nepali Buwa",
       artist: "Balen",
-      file: "../../assets/BALEN - AAM NEPALI BUWAA (OST JHARI PACHHI KO INDRENI).mp3",
+      file: "assets/BALEN - AAM NEPALI BUWAA (OST JHARI PACHHI KO INDRENI).mp3",
       isBookmark: false
     },
   {
     id: 2,
     title: "BHAWANA",
     artist: "Rockheads Nepal",
-    file: "../../assets/BHAWANA  Rockheads  Official Music Video - Rockheads Nepal.mp3",
+    file: "assets/BHAWANA  Rockheads  Official Music Video - Rockheads Nepal.mp3",
     isBookmark: false
   },
   {
