@@ -9,7 +9,6 @@ import {searchFunctionality} from "./src/search.js";
 import SleepFunctionality from "./src/sleep.js"
 import exportBookMarkFeature from "./src/bookmark.js"
 import speedAndVolume from "./src/volume-speed.js";
-// LoadingStates();
 let index= 0;
 let audiobtn=document.getElementById("audiobtn");
 
@@ -98,6 +97,7 @@ selectProgressBar.oninput = () => {
 
 let length=movieList.length;
 document.addEventListener("DOMContentLoaded", (e)=>{
+  LoadingStates(audiobtn);
   index=localStorage.getItem("index")
   let isFromPlaylistPage=sessionStorage.getItem("playlist-id")
   if(isFromPlaylistPage!==null){
