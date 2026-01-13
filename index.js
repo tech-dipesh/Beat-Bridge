@@ -1,7 +1,3 @@
-// For making a title infinite:
-
-console.log("printed");
-import movieList from "./src/list/music-list.js";
 import {playListExport} from "./src/playlist-index.js"
 import LoadingStates from "./src/loading.js";
 import keyWordShortcut from "./src/shortcut.js";
@@ -9,7 +5,9 @@ import {searchFunctionality} from "./src/search.js";
 import SleepFunctionality from "./src/sleep.js"
 import exportBookMarkFeature from "./src/bookmark.js"
 import speedAndVolume from "./src/volume-speed.js";
-let index= 0;
+import movieList from "./src/list/music-list.js";
+let index=  localStorage.getItem("index")?? 0
+
 let audiobtn=document.getElementById("audiobtn");
 
 
@@ -105,6 +103,7 @@ document.addEventListener("DOMContentLoaded", (e)=>{
   }
 
   // audiobtn.setAttribute("src", movieList[index].title);
+  index=index?? 0
   audiobtn.src=movieList[index].file;
   title.forEach(element => element.innerText=`${movieList[index].title}`)
   document.title=`Music: ${movieList[index].title}`
@@ -112,7 +111,6 @@ document.addEventListener("DOMContentLoaded", (e)=>{
 
 
 audiobtn.onloadedmetadata=()=>{
-  index=localStorage.getItem("index")
   let minute=Math.floor(audiobtn.duration/60), second=Math.floor(audiobtn.duration%60);
   selectProgressBar.setAttribute("max", Math.floor(audiobtn.duration))
   totaltime.innerText=`${minute}: ${second}`

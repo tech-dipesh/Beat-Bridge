@@ -111,6 +111,8 @@ Sleep timer controls
 Shortcut list opens as a floating card and closes automatically or by shortcut.
 
 
+Loading State:
+- Also add teh loading state till our content is not loaded.
 ---
 
 ⏱️ Sleep Timer
