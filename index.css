@@ -3,14 +3,16 @@
       --shadowbox: 0 4px 15px #0000004d;
       --secondshadow: 0 2px 8px #ffd70080;
     }
-    body {
-      margin: 0;
-      padding: 0;
-      display: flex;
-      background: #1a1a1a;
-      padding-top: 100px;
-
-    }
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  background: #1a1a1a;
+  padding-top: 100px;
+}
+@media screen {
+  
+}
     
 
   #card {

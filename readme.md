@@ -7,7 +7,7 @@
   Move Volume range and speed to the new file 
 
 
-# 🎵 Advanced Music Player (Vanilla JavaScript)
+#  Advanced Music Player (Vanilla JavaScript)
 
 This is a full music player built from scratch using only JavaScript, HTML, and CSS.
 No frameworks, no AI code, no tutorials — all logic manually designed and written.
@@ -15,7 +15,7 @@ No frameworks, no AI code, no tutorials — all logic manually designed and writ
 The project plays 36 local audio files with a complete music control system, playlists, shortcuts, timers, and full state saving.
 
 
-## ✨ Features
+##  Features
 
 - 🎧 Core Music Controls
 - Play / Pause
@@ -29,7 +29,7 @@ The project plays 36 local audio files with a complete music control system, pla
 
 
 
-🎚️ Speed & Volume
+ Speed & Volume
 
 Speed control: 0.25x → 3.0x
 
@@ -41,7 +41,7 @@ Smooth UI with real-time updates
 
 ---
 
-📜 Song List Table
+ Song List Table
 
 Full table of all songs
 
@@ -53,7 +53,7 @@ Scrollable and easy to use
 
 ---
 
-📂 Playlists & Queue System
+ Playlists & Queue System
 
 Separate playlist section on left side
 
@@ -68,7 +68,7 @@ Queue plays automatically after current song finishes
 
 ---
 
-🔖 Bookmarks
+ Bookmarks
 
 Bookmark any song
 
@@ -79,7 +79,7 @@ Highlight bookmarked songs
 
 ---
 
-🔍 Search
+ Search
 
 Search any song by name
 
@@ -89,7 +89,7 @@ Click a search result to play instantly
 
 ---
 
-⌨️ Keyboard Shortcuts
+⌨ Keyboard Shortcuts
 
 More than 10 shortcuts, including:
 
@@ -115,7 +115,7 @@ Loading State:
 - Also add teh loading state till our content is not loaded.
 ---
 
-⏱️ Sleep Timer
+⏱ Sleep Timer
 
 Predefined timers: 1, 5, 10, 30 minutes, and 1 hour
 
@@ -127,7 +127,7 @@ Music stops automatically when timer expires
 
 ---
 
-💾 LocalStorage Integration
+ LocalStorage Integration
 
 Save last played song
 
@@ -143,76 +143,11 @@ Auto-load everything when the page is opened again
 
 ---
 
-📊 User Stats
+ User Stats
 Display play count in UI
 
 
 
----
-
-🛠️ Tech Stack
-
-HTML
-
-CSS
-
-JavaScript (Vanilla JS)
-No React, no libraries, no frameworks.
-
-
-
-🎯 Why This Project Is Special
-
-Built 100% manually with own logic
-
-No AI help in coding
-
-No copy-paste
-
-Learned from MDN and StackOverflow only
-
-Pure DOM manipulation
-
-Real-time event handling
-
-Multi-system architecture: audio, playlist, queue, storage, shortcuts, timers
-
-
-This shows strong JavaScript skills and real problem-solving ability.
-
-
----
-
-📸 Screenshots (add when ready)
-
-Music Table
-
-Playlist UI
-
-Bookmark List
-
-Shortcut Card
-
-Sleep Timer UI
-
-
-
----
-
-🚀 How to Run
-
-Just Open Browser, 
-
-
----
-
-📌 Future Plans
+Any Plans
 
 I am not adding new features; the project is complete.
-
-
----
-
-📄 License
-
-This is an open project. You can use the idea or improve it.
